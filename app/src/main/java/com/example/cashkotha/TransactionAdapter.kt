@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class TransactionAdapter(
+class  TransactionAdapter(
     private val context: Context,
     private val transactions: List<Transaction>
 ) : ArrayAdapter<Transaction>(context, 0, transactions) {

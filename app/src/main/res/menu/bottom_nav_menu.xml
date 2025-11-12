@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
         android:title="Home" />
-
-    <item
-        android:id="@+id/nav_analysis"
-        android:icon="@drawable/ic_analysis"
-        android:title="Analysis" />
 
     <item
         android:id="@+id/nav_transactions"
@@ -17,13 +11,22 @@
         android:title="Transactions" />
 
     <item
-        android:id="@+id/nav_category"
-        android:icon="@drawable/ic_category"
-        android:title="Category" />
+        android:id="@+id/nav_goals"
+        android:icon="@drawable/ic_goals"
+        android:title="Goals" />
 
     <item
-        android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        android:id="@+id/nav_discounts"
+        android:icon="@drawable/ic_discounts"
+        android:title="Discounts" />
 
+    <item
+        android:id="@+id/nav_calculator"
+        android:icon="@drawable/ic_calculator"
+        android:title="Calculator" />
+
+    <item
+        android:id="@+id/nav_ai_advisor"
+        android:icon="@drawable/ic_ai"
+        android:title="AI Advisor" />
 </menu>

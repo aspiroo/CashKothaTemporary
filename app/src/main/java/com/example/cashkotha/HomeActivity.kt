@@ -1,7 +1,9 @@
 package com.example.cashkotha
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cashkotha.databinding.ActivityHomeBinding
@@ -9,6 +11,8 @@ import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.LinearLayout
+import com.example.cashkotha.utils.setupBottomNav
+import kotlin.jvm.java
 
 class HomeActivity : AppCompatActivity() {
 
@@ -17,6 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -87,38 +92,23 @@ class HomeActivity : AppCompatActivity() {
         transactionsList.adapter = adapter
 
 
-        // Example: BottomNavigationView listener
-        binding.bottomNavigationView.setOnItemSelectedListener { item ->
-            when(item.itemId) {
-                R.id.nav_home -> { /* handle home */
-                    showToast("Home clicked")
-                    true
-                }
-
-                R.id.nav_transactions -> { /* handle transactions */
-                    showToast("Transactions clicked")
-                    true
-                }
-                R.id.nav_analysis -> { /* handle budget */
-                    showToast("Analysis clicked")
-                    true
-                }
-                R.id.nav_category -> { /* handle budget */
-                    showToast("Category clicked")
-                    true
-                }
-                R.id.nav_profile -> { /* handle budget */
-                    showToast("Profile clicked")
-                    true
-                }
-                else -> false
-            } as Boolean
-        }
+        setupBottomNav(this, binding.bottomNavigationView)
 
         val notificationIcon = findViewById<ImageView>(R.id.notification_icon)
         notificationIcon.setOnClickListener {
-            // Handle click here
-            showToast("Notification icon clicked")
+            val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
+        }
+
+        val settingsIcon = findViewById<ImageView>(R.id.settings_icon)
+        settingsIcon.setOnClickListener {
+            showToast("Settings icon clicked")
+        }
+
+        val profileIcon = findViewById<ImageView>(R.id.profile_icon)
+        profileIcon.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
 
     }
