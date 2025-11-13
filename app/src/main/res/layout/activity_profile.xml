@@ -68,7 +68,7 @@
         android:scaleType="centerCrop"
         android:contentDescription="Profile Picture"
         android:background="@drawable/circular_background"
-        android:clipToOutline="true" />
+        />
 
     <!-- Name -->
     <TextView
