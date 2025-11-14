@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/offerCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#E8F5F1"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:rippleColor="#1DB890">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Image Container -->
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/circular_background">
+
+            <ImageView
+                android:id="@+id/offerImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_placeholder_offer"
+                android:contentDescription="Offer Image" />
+        </FrameLayout>
+
+        <!-- Offer Title -->
+        <TextView
+            android:id="@+id/offerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offer Title"
+            android:textColor="#1DB890"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- Offer Description -->
+        <TextView
+            android:id="@+id/offerDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Up to 50% Off"
+            android:textColor="#052224"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- View Offer Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tap to View"
+            android:textColor="#1DB890"
+            android:textSize="11sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -26,9 +26,10 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        val displayName = intent.getStringExtra("name")
         // --- Tabs ---
         val generalTab = findViewById<TextView>(R.id.general_tab)
+        generalTab.text = displayName
         val transactionsTab = findViewById<TextView>(R.id.transactions_tab)
         val budgetTab = findViewById<TextView>(R.id.budget_tab)
 

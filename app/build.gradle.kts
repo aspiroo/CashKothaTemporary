@@ -71,6 +71,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
     implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.0")) // Use the latest BoM version
     implementation("com.google.android.gms:play-services-auth:21.2.0") // Specific library for Google Sign-In

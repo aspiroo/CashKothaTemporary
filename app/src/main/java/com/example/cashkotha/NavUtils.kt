@@ -12,6 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 fun AppCompatActivity.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
+
 fun setupBackArrow(activity: AppCompatActivity, toolbar: Toolbar) {
     activity.setSupportActionBar(toolbar)
     activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -22,10 +23,12 @@ fun setupBackArrow(activity: AppCompatActivity, toolbar: Toolbar) {
         // Or finish() if you just want to close
     }
 }
+
 fun setupBottomNav(activity: AppCompatActivity, navView: BottomNavigationView) {
     when (activity) {
         is HomeActivity -> navView.selectedItemId = R.id.nav_home
         is CalculatorActivity -> navView.selectedItemId = R.id.nav_calculator
+        is DiscountsActivity -> navView.selectedItemId = R.id.nav_discounts
         // add other activities if needed
     }
 
@@ -52,7 +55,9 @@ fun setupBottomNav(activity: AppCompatActivity, navView: BottomNavigationView) {
                 true
             }
             R.id.nav_discounts -> {
-                Toast.makeText(activity, "Discounts clicked", Toast.LENGTH_SHORT).show()
+                if (activity !is DiscountsActivity) {
+                    activity.startActivity(Intent(activity, DiscountsActivity::class.java))
+                }
                 true
             }
             R.id.nav_ai_advisor -> {
@@ -63,4 +68,3 @@ fun setupBottomNav(activity: AppCompatActivity, navView: BottomNavigationView) {
         }
     }
 }
-
