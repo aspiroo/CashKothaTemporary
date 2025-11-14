@@ -41,8 +41,8 @@
             android:background="@drawable/tab_background_unselected"
             android:clickable="true"
             android:focusable="true"
-            android:padding="6dp" />
-        <!--android:src="@drawable/ic_settings" /> -->
+            android:padding="6dp"
+            android:src="@drawable/ic_settings" />
 
     <ImageView
         android:id="@+id/profile_icon"
@@ -159,6 +159,10 @@
         android:background="@drawable/bottom_nav_background"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemBackground="@drawable/bottom_nav_item_background"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemRippleColor="@android:color/transparent"
         android:fitsSystemWindows="true"
         android:elevation="8dp" />
 

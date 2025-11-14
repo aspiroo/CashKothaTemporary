@@ -30,7 +30,7 @@
     <!-- Scrollable White Background Area -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="675dp"
+        android:layout_height="match_parent"
         android:layout_above="@id/bottomNavigationView"
         android:layout_marginTop="120dp"
         android:layout_marginBottom="-26dp"
@@ -64,5 +64,11 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottom_nav_background"
         app:menu="@menu/bottom_nav_menu"
-        app:labelVisibilityMode="unlabeled" />
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemBackground="@drawable/bottom_nav_item_background"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemActiveIndicatorStyle="@null"
+        android:fitsSystemWindows="true"
+        android:elevation="8dp" />
 </RelativeLayout>
